@@ -159,14 +159,12 @@ class UdfpsControllerOverlay @JvmOverloads constructor(
     private var overlayTouchListener: TouchExplorationStateChangeListener? = null
 
     private val useFrameworkDimming = context.resources.getBoolean(
-        com.android.systemui.res.R.bool.config_udfpsFrameworkDimming
-    )
+            com.android.systemui.res.R.bool.config_udfpsFrameworkDimming)
 
     private val udfpsHelper: UdfpsHelper? = if (useFrameworkDimming) {
-        UdfpsHelper(context, windowManager, shadeInteractor, requestReason)
-    } else {
+        UdfpsHelper(context, windowManager, shadeInteractor, transitionInteractor, requestReason)
+    } else
         null
-    }
 
     private val coreLayoutParams = WindowManager.LayoutParams(
         WindowManager.LayoutParams.TYPE_NAVIGATION_BAR_PANEL,

@@ -955,7 +955,9 @@ public final class NotificationPanelViewController implements ShadeSurface, Dump
             @Override
             public void onChange(boolean selfChange) {
                 mDoubleTapToSleepEnabled = Settings.System.getInt(mContentResolver,
-                        Settings.System.DOUBLE_TAP_SLEEP_GESTURE, 0) != 0;
+                        Settings.System.DOUBLE_TAP_SLEEP_GESTURE,
+                        mResources.getBoolean(com.android.internal.R.bool.
+                                config_dt2sGestureEnabledByDefault) ? 1 : 0) != 0;
             }
         };
         mConversationNotificationManager = conversationNotificationManager;

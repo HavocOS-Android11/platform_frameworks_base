@@ -43,7 +43,6 @@
 
     <!-- Array of brightness-alpha LUT for framework dimming -->
     <string-array name="config_udfpsDimmingBrightnessAlphaArray" translatable="false">
-          <item>0,255</item>
           <item>1,248</item>
           <item>2,242</item>
           <item>3,238</item>

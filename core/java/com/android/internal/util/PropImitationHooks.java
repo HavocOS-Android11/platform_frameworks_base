@@ -139,8 +139,6 @@ public class PropImitationHooks {
     );
 
     private static final Set<String> sPixelFeatures = Set.of(
-            "GOOGLE_BUILD",
-            "GOOGLE_EXPERIENCE",
             "PIXEL_2017_EXPERIENCE",
             "PIXEL_2017_PRELOAD",
             "PIXEL_2018_EXPERIENCE",
